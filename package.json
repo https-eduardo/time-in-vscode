@@ -16,8 +16,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "time-in-vscode.helloWorld",
-        "title": "Hello World"
+        "command": "time-in-vscode.view",
+        "title": "See how many time you spent in VSCode"
       }
     ]
   },

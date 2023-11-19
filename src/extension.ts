@@ -2,17 +2,20 @@ import * as vscode from "vscode";
 import { TimeStore } from "./timeStore";
 import { TimeFormatter } from "./timeFormatter";
 
-const COMMAND_ID = "view-time-in-vscode";
-const INTERVAL_TIME = 5;
+const COMMAND_ID = "time-in-vscode.view";
+const INTERVAL_TIME = 1;
 
 export function activate(context: vscode.ExtensionContext) {
   let editor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
 
-  const globalStore = new TimeStore(context.globalState, "global-time-elapsed");
+  const globalStore = new TimeStore(
+    context.globalState,
+    "time-in-vscode.global-time-elapsed"
+  );
 
   const workspaceStore = new TimeStore(
     context.workspaceState,
-    "workspace-time-elapsed"
+    "time-in-vscode.workspace-time-elapsed"
   );
 
   vscode.commands.registerCommand(COMMAND_ID, () => {
