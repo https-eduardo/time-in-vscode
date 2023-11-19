@@ -12,6 +12,9 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "repository": {
+    "url": "https://github.com/https-eduardo/time-in-vscode"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
