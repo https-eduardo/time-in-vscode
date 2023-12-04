@@ -3,7 +3,7 @@ import { TimeStore } from "./timeStore";
 import { TimeFormatter } from "./timeFormatter";
 
 const COMMAND_ID = "time-in-vscode.view";
-const INTERVAL_TIME = 1;
+const INTERVAL_TIME = 1000;
 
 export function activate(context: vscode.ExtensionContext) {
   let editor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     globalStore.update(INTERVAL_TIME);
     workspaceStore.update(INTERVAL_TIME);
-  }, INTERVAL_TIME * 1000);
+  }, INTERVAL_TIME);
 
   statusBarItem.show();
 }

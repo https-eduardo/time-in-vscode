@@ -2,7 +2,7 @@
   "name": "time-in-vscode",
   "displayName": "Time in VSCode",
   "description": "An extension that logs the time you spend with vscode open",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "eduardoodelonw",
   "icon": "./icon.png",
   "engines": {
